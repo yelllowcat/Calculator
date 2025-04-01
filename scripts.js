@@ -101,6 +101,50 @@ function operate(n1 = 0, op = "+", n2 = 0) {
 const display = document.querySelector(".display");
 
 function toDisplay(e) {
-  const text = e.target.textContent; // Get the text content of the clicked button
-  console.log(e);
+  const response = e.target.textContent;
+
+  if (response == "0") {
+    display.append(0);
+  }
+  if (response == "1") {
+    display.append(1);
+  }
+  if (response == "2") {
+    display.append(2);
+  }
+  if (response == "3") {
+    display.append(3);
+  }
+  if (response == "4") {
+    display.append(4);
+  }
+  if (response == "5") {
+    display.append(5);
+  }
+  if (response == "6") {
+    display.append(6);
+  }
+  if (response == "7") {
+    display.append(7);
+  }
+  if (response == "8") {
+    display.append(8);
+  }
+  if (response == "9") {
+    display.append(9);
+  }
+  if (response == "-") {
+    n1 = display.textContent;
+    display.textContent = "";
+  }
+  if (response == "*") {
+    n1 = display.textContent;
+  }
+  if (response == "/") {
+    n1 = display.textContent;
+  }
+
+  if (response == "=") {
+    operate(n1, "/", n2);
+  }
 }
